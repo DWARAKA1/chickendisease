@@ -13,6 +13,7 @@ import base64
 
 
 @ensure_annotations
+@ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
@@ -26,6 +27,9 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     Returns:
         ConfigBox: ConfigBox type
     """
+    if os.path.getsize(path_to_yaml) == 0:
+        raise ValueError("yaml file is empty")
+    
     try:
         with open(path_to_yaml) as yaml_file:
             content = yaml.safe_load(yaml_file)
@@ -35,6 +39,11 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
+if os.path.getsize(path_to_yaml) > 0:
+    config = read_yaml(path_to_yaml)
+else:
+    print("YAML file is empty")
+    # handle the case where the YAML file is empty
     
 
 

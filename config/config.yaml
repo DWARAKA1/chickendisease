@@ -1,0 +1,29 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion  
+  source_URL:D:\chickendiseasedataset:
+  local_data_file: D:\chickendiseasedataset\dataset1.zip
+  unzip_dir: D:\chickendiseasedataset\chickendiseasedataset
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  local_data_file: D:\chickendiseasedataset\chickendiseasedataset
+  unzip_dir: D:\chickendiseasedataset\chickendiseasedataset
+  transformed_dir: D:\chickendiseasedataset\chickendiseasedataset\transformed_data
+  transformed_train_dir: D:\chickendiseasedataset\chickendiseasedataset\transformed_data\train
+  transformed_test_dir: D:\chickendiseasedataset\chickendiseasedataset\transformed_data\test  
+
+model_trainer:  
+  root_dir: artifacts/model_trainer  
+  train_data_path: D:\chickendiseasedataset\chickendiseasedataset\transformed_data\train  
+  test_data_path: D:\chickendiseasedataset\chickendiseasedataset\transformed_data\test  
+  model_name: model.pkl
+  expected_score: 0.5  
+  overfitting_threshold: 0.1
+
+model_pusher:
+  root_dir: artifacts/model_pusher
+  model_export_dir: D:\chickendiseasedataset\chickendiseasedataset\saved_models 
+  

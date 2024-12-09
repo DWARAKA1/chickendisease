@@ -1,2 +1,4 @@
 [2024-12-08 11:20:38,101: INFO: main: Welcome to custom log]
 [2024-12-08 11:21:58,559: INFO: main: Welcome to custom log]
+[2024-12-09 10:54:29,486:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2024-12-09 10:54:29,495:INFO:common:yaml file: params.yaml loaded successfully]
