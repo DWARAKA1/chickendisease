@@ -1,9 +1,8 @@
 artifacts_root: artifacts
 
-
 data_ingestion:
   root_dir: artifacts/data_ingestion  
-  source_URL:D:\chickendiseasedataset:
+  source_url: https://github.com/DWARAKA1/chickendisease/raw/refs/heads/main/Chicken-fecal-images.zip
   local_data_file: D:\chickendiseasedataset\dataset1.zip
   unzip_dir: D:\chickendiseasedataset\chickendiseasedataset
 
